@@ -1,0 +1,14 @@
+@import '_variables';
+
+%wrapper {
+  max-width: var(--content-box-width);
+  margin: 0 auto;
+
+  @media (max-width: $MQNarrow) {
+    padding: 2rem;
+  }
+
+  @media (max-width: $MQMobileNarrow) {
+    padding: 1.5rem;
+  }
+}

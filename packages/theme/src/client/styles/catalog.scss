@@ -1,0 +1,34 @@
+@import "common-sidebar";
+
+.catalog{
+  width: var(--catalog-width);
+  margin-left: 22px;
+  margin-top: 13px;
+
+  &.fixed-right {
+    position: fixed;
+    right: 50%;
+    margin-right: -660px;
+  }
+
+  & > * {
+    width: 100%;
+  }
+
+  .index-top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    cursor: pointer;
+    height: 52px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border-bottom: 1px solid #e8e8e8;
+  }
+
+  .level-box {
+    @extend %sidebar;
+  }
+}
