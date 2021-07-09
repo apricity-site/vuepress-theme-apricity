@@ -51,6 +51,7 @@ import {
 import { isArray } from '@vuepress/shared'
 import type { DefaultThemeHomePageFrontmatter } from '../../shared'
 import NavLink from './NavLink.vue'
+import { useWikiStorage } from '../../shared'
 
 export default defineComponent({
   name: 'Home',
@@ -92,6 +93,9 @@ export default defineComponent({
         'Welcome to your VuePress site'
       )
     })
+
+    const wikiStorage = useWikiStorage()
+    console.log(wikiStorage)
 
     const actions = computed(() => {
       if (!isArray(frontmatter.value.actions)) {

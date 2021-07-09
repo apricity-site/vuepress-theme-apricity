@@ -31,6 +31,7 @@
     "@commitlint/cli": "^13.0.0",
     "@commitlint/config-conventional": "^13.0.0",
     "@types/jest": "^26.0.23",
+    "@vuepress/cli": "^2.0.0-alpha.8",
     "anywhere": "^1.5.0",
     "cpx2": "^3.0.0",
     "cross-env": "^7.0.3",

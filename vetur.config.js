@@ -1,7 +1,9 @@
 const fs = require('fs')
 const path = require('path')
 
-const packages = fs.readdirSync(path.resolve(__dirname, 'packages/@vuepress'))
+const packages = fs.readdirSync(
+  path.resolve(__dirname, 'packages/@vuepress-apricity')
+)
 
 module.exports = {
   settings: {
@@ -10,7 +12,7 @@ module.exports = {
   },
   projects: [
     './docs',
-    './packages/vuepress',
-    ...packages.map((item) => `./packages/@vuepress/${item}`),
+    './packages/theme',
+    ...packages.map((item) => `./packages/@vuepress-apricity/${item}`),
   ],
 }

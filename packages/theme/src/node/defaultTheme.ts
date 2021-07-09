@@ -15,6 +15,8 @@ import {
   resolveMediumZoomPluginOptions,
 } from './utils'
 
+import { resolveWikiStorage } from '../shared'
+
 export interface DefaultThemeOptions
   extends ThemeConfig,
     DefaultThemeLocaleOptions {
@@ -46,10 +48,7 @@ export const defaultTheme: Theme<DefaultThemeOptions> = ({
     // use the relative file path to generate edit link
     extendsPageData: (page, app) => {
       const { filePathRelative } = page
-      console.log('extends')
-      if (page.frontmatter.home) {
-        console.log(page.frontmatter)
-      }
+      resolveWikiStorage(page, app)
       return {
         filePathRelative,
       }

@@ -2,7 +2,7 @@ const { resolve } = require('path')
 const { readdirSync } = require('fs')
 const { compilerOptions } = require('./tsconfig.base.json')
 
-const packagesDir = 'packages/@vuepress'
+const packagesDir = 'packages/@vuepress-apricity'
 const packages = readdirSync(resolve(__dirname, packagesDir), {
   withFileTypes: true,
 })
@@ -32,10 +32,10 @@ module.exports = {
     '__SSR__': false,
   },
   moduleNameMapper: {
-    [`^@vuepress/(${commonPackages.join(
+    [`^@vuepress-apricity/(${commonPackages.join(
       '|'
     )})$`]: `<rootDir>/${packagesDir}/$1/src`,
-    [`^@vuepress/(${pluginAndThemePackages.join(
+    [`^@vuepress-apricity/(${pluginAndThemePackages.join(
       '|'
     )})$`]: `<rootDir>/${packagesDir}/$1/src/node`,
     '^@internal/(.*)$': `<rootDir>/packages/@vuepress/client/__tests__/__fixtures__/$1`,

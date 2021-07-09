@@ -30,6 +30,7 @@
     "copy": "cpx \"src/**/*.{d.ts,vue,scss}\" lib"
   },
   "dependencies": {
+    "@vuepress/cli": "^2.0.0-alpha.8",
     "@vuepress/client": "2.0.0-beta.20",
     "@vuepress/core": "2.0.0-beta.20",
     "@vuepress/plugin-active-header-links": "2.0.0-beta.20",
